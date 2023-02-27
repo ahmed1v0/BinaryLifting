@@ -21,7 +21,7 @@ int get_lca(int a,int b){
     if(depth[a] != depth[b]){
         if(depth[a] < depth[b])
             swap(a,b);
-        a = binsearch(a,abs(depth[a] - depth[b]));
+        a = findKthAncestor(a,abs(depth[a] - depth[b]));
     }
     if(a == b) return a;
     for(int bit = l; bit >= 0;bit--)
